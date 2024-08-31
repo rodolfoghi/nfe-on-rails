@@ -16,7 +16,10 @@
         <tr>
           <td><%= grupo_de_item.codigo %></td>
           <td><%= grupo_de_item.descricao %></td>
-          <td><%= link_to "Ver", grupo_de_item, class: "btn btn-outline-primary" %></td>
+          <td>
+            <%= link_to "Editar", edit_grupo_de_item_path(grupo_de_item), class: "btn btn-outline-primary" %>
+            <%= link_to "Ver", grupo_de_item, class: "btn btn-outline-secondary" %>
+          </td>
         </tr>
       <% end %>
     </tbody>
