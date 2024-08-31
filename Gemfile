@@ -58,4 +58,4 @@ end
 
 gem "rackup", "~> 2.1"
 
-gem "dockerfile-rails", ">= 1.6", :group => :development
+gem "dockerfile-rails", ">= 1.6", group: :development
