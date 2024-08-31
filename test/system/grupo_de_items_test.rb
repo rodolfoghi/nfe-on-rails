@@ -3,20 +3,21 @@ require "application_system_test_case"
 class GrupoDeItemsTest < ApplicationSystemTestCase
   setup do
     @grupo_de_item = grupo_de_items(:one)
+    @grupo_de_item.codigo = Time.now.to_i.to_s
   end
 
   test "visiting the index" do
     visit grupo_de_items_url
-    assert_selector "h1", text: "Grupo de items"
+    assert_selector "h2", text: "Grupos de itens"
   end
 
   test "should create grupo de item" do
     visit grupo_de_items_url
-    click_on "New grupo de item"
+    click_on "Novo grupo de item"
 
-    fill_in "Codigo", with: @grupo_de_item.codigo
-    fill_in "Descricao", with: @grupo_de_item.descricao
-    click_on "Create Grupo de item"
+    fill_in "Código", with: @grupo_de_item.codigo
+    fill_in "Descrição", with: @grupo_de_item.descricao
+    click_on "Salvar"
 
     assert_text "Grupo de item was successfully created"
     click_on "Back"
@@ -26,9 +27,9 @@ class GrupoDeItemsTest < ApplicationSystemTestCase
     visit grupo_de_item_url(@grupo_de_item)
     click_on "Edit this grupo de item", match: :first
 
-    fill_in "Codigo", with: @grupo_de_item.codigo
-    fill_in "Descricao", with: @grupo_de_item.descricao
-    click_on "Update Grupo de item"
+    fill_in "Código", with: @grupo_de_item.codigo
+    fill_in "Descrição", with: @grupo_de_item.descricao
+    click_on "Salvar"
 
     assert_text "Grupo de item was successfully updated"
     click_on "Back"
