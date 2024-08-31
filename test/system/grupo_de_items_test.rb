@@ -20,24 +20,24 @@ class GrupoDeItemsTest < ApplicationSystemTestCase
     click_on "Salvar"
 
     assert_text "Grupo de item was successfully created"
-    click_on "Back"
+    click_on "Voltar"
   end
 
   test "should update Grupo de item" do
     visit grupo_de_item_url(@grupo_de_item)
-    click_on "Edit this grupo de item", match: :first
+    click_on "Editar", match: :first
 
     fill_in "Código", with: @grupo_de_item.codigo
     fill_in "Descrição", with: @grupo_de_item.descricao
     click_on "Salvar"
 
     assert_text "Grupo de item was successfully updated"
-    click_on "Back"
+    click_on "Voltar"
   end
 
   test "should destroy Grupo de item" do
     visit grupo_de_item_url(@grupo_de_item)
-    click_on "Destroy this grupo de item", match: :first
+    click_on "Excluir", match: :first
 
     assert_text "Grupo de item was successfully destroyed"
   end

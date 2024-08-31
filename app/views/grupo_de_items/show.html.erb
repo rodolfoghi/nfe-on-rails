@@ -1,10 +1,17 @@
+<style>
+  form.button_to {
+    display: inline-block;
+  }
+</style>
+
 <p style="color: green"><%= notice %></p>
 
-<%= render @grupo_de_item %>
+<p><strong><%= @grupo_de_item.class.human_attribute_name(:codigo) %>:</strong> <%= @grupo_de_item.codigo %></p>
+<p><strong><%= @grupo_de_item.class.human_attribute_name(:descricao) %>:</strong> <%= @grupo_de_item.descricao %></p>
 
 <div>
-  <%= link_to "Edit this grupo de item", edit_grupo_de_item_path(@grupo_de_item) %> |
-  <%= link_to "Back to grupo de items", grupo_de_items_path %>
+  <%= link_to "Editar", edit_grupo_de_item_path(@grupo_de_item), class: "btn btn-outline-primary" %>
+  <%= link_to "Voltar", grupo_de_items_path, class: "btn btn-outline-secondary" %>
 
-  <%= button_to "Destroy this grupo de item", @grupo_de_item, method: :delete %>
+  <%= button_to "Excluir", @grupo_de_item, method: :delete, class: "btn btn-outline-danger" %>
 </div>
