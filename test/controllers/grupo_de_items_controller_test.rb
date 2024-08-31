@@ -3,6 +3,7 @@ require "test_helper"
 class GrupoDeItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @grupo_de_item = grupo_de_items(:one)
+    @grupo_de_item.codigo = Time.now.to_i.to_s
   end
 
   test "should get index" do
