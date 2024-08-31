@@ -1,0 +1,22 @@
+<%= form_with(model: grupo_de_item) do |form| %>
+  <% if grupo_de_item.errors.any? %>
+    <div style="color: red">
+      <ul>
+        <% grupo_de_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="mb-3">
+    <%= form.label :codigo, "Código", class: "form-label" %>
+    <%= form.text_field :codigo, class:"form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= form.label :descricao, "Descrição", class: "form-label"  %>
+    <%= form.text_field :descricao, class:"form-control" %>
+  </div>
+  <div>
+    <%= form.submit "Salvar", class: "btn btn-primary" %>
+  </div>
+<% end %>

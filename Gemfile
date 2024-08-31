@@ -55,3 +55,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "rackup", "~> 2.1"
+
+gem "dockerfile-rails", ">= 1.6", :group => :development

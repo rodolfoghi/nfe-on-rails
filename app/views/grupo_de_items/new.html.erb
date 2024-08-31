@@ -1,0 +1,7 @@
+<% content_for :title, "New grupo de item" %>
+<h2>Novo grupo de itens</h2>
+<%= render "form", grupo_de_item: @grupo_de_item %>
+<br>
+<div>
+  <%= link_to "Cancelar", grupo_de_items_path, class: "btn btn-outline-danger" %>
+</div>

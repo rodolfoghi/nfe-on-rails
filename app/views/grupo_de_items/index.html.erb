@@ -1,0 +1,24 @@
+<% content_for :title, "Grupos de itens" %>
+<h2>Grupos de itens</h2>
+<p style="color: green"><%= notice %></p>
+<div id="grupo_de_items">
+  <%= link_to "Novo grupo de item", new_grupo_de_item_path, class:"btn btn-primary" %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @grupo_de_items.each do |grupo_de_item| %>
+        <tr>
+          <td><%= grupo_de_item.codigo %></td>
+          <td><%= grupo_de_item.descricao %></td>
+          <td><%= link_to "Ver", grupo_de_item, class: "btn btn-outline-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
