@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_08_31_005331) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_27_020905) do
   create_table "grupo_de_items", force: :cascade do |t|
     t.text "codigo"
     t.text "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ufs", force: :cascade do |t|
+    t.integer "codigo"
+    t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

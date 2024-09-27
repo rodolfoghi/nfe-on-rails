@@ -1,0 +1,17 @@
+<h1>Códigos de UF do IBGE</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ufs.each do |uf| %>
+      <tr>
+        <td><%= uf.codigo %></td>
+        <td><%= uf.descricao %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
